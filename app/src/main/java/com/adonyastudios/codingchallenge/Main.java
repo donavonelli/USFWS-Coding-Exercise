@@ -74,5 +74,29 @@ public class Main {
 
         String result = dag2.calculateLongestPath(D2);
         System.out.println(result);
+
+        //Question 1: Does the solution work for larger graphs?
+        // As long as the graph is in fact a DAG then it should work on any sized graph
+
+        //Question 2: Can you think of any optimizations?
+        /*There is room for more efficency such as removing the fromVertices ArrayList and using
+            better data structures to reduce redundacy but i believe my solution is an accurate display
+            of how i personally tackle coding problems
+         */
+
+        //Question 3: What’s the computational complexity of your solution?
+        /*
+        In terms of Big O notation, I believe my code is Linear Time Complexity for the simple fact
+        if you add another Vertice and you make a new connection the code only has to account for
+        that vertices and what Vertices it may be connected to, without it having to run any complicated
+        extra code
+         */
+
+        //Question 4: Are there any unusual cases that aren't handled?
+        /*
+        I believe I have handled a majority of the cases to ensure the integrity of a DAG. However
+        if one wanted to get past such checks, the vertices layers are able to be adjusted after
+        being connected, compromising the integrity of a DAG in the process
+         */
     }
 }
