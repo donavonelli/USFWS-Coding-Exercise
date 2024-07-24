@@ -20,6 +20,8 @@ public class Main {
         dag.connectVertices(C,B);
         dag.connectVertices(B,D);
         dag.connectVertices(C,D);
+        //No backwards movement test
+//        dag.connectVertices(C,D);
         dag.connectVertices(A,E);
         dag.connectVertices(D,E);
         //Testing case 4 , shouldn't be allowed to connect to a Vertex on a higher layer
@@ -27,6 +29,8 @@ public class Main {
         //Testing case 5 , connected vertices shouldn't connect to a higher layer aka only move
         //in one direction
         dag.connectVertices(F,A);
+
+        dag.calculateLongestPath(B);
 
         System.out.println(E.connectedVertices);
     }
